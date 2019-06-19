@@ -27,4 +27,4 @@ deploy:
   on:
     branch: master
   local_dir: scr/_site
-  target_branch: master
+  target_branch: gh-pages
