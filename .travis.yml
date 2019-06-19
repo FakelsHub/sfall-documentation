@@ -1,0 +1,30 @@
+language: ruby
+cache: bundler
+rvm:
+  - 2.3
+
+sudo: false
+
+before_install:
+  - gem update --system
+  - gem install bundler
+  - pip install PyYAML
+script: ./scr/generate.sh
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    JEKYLL_ENV: production
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: false
+  on:
+    branch: master
+  local_dir: scr/_site
+  target_branch: master
