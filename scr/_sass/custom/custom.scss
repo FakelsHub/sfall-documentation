@@ -1,4 +1,4 @@
-$link-color: $blue-000;
+$link-color: $blue-100;
 
 .navigation {
   padding-top: 1rem !important;
@@ -8,8 +8,14 @@ $link-color: $blue-000;
 }
 
 .highlight .kt {
-  color: #93a1a1 !important;
+  color: #2F4F4F !important;
 }
 .highlight .n {
-  color: #dc322f !important;
+  color: #C71585 !important;
+}
+.highlight .o {
+  color: #2F4F4F !important;
+}
+.highlight .k {
+  color: #555 !important;
 }

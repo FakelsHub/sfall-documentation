@@ -29,7 +29,7 @@ nav_order: 2
 
   For example, if you pick prefix "**a_**", your script could be named `gl_a_myscript.int`, and might look like this:
   
-  ```c++
+  ```js
     #define S_NAME "gl_a_myscript"
     #define ndebug(message) debug_msg(S_NAME + ": " + message + "\n")
 
@@ -44,7 +44,7 @@ nav_order: 2
 
 ## Performance
 
-1. Do not abuse Sfall [global variables]({{ site.baseurl }}/global-variables/) and [saved arrays]({{ site.baseurl }}/arrays/#storing-arrays). This will lead to savegame bloating. But do use them if necessary, they are added for a reason.
+1. Do not abuse sfall [global variables]({{ site.baseurl }}/global-variables/) and [saved arrays]({{ site.baseurl }}/arrays/#storing-arrays). This will lead to savegame bloating. But do use them if necessary, they are added for a reason.
 2. Do not abuse [set_global_script_repeat]({{ site.baseurl }}/global-scripts/). Whenever possible, register your script as a [hook]({{ site.baseurl }}/hooks/) instead. You can register the same procedure at multiple hook points, if necessary.
   - If you have `set_global_script_repeat(300)` in your script, you're probably doing something wrong. That's an invocation every 3-5 seconds, approximately.
   - If you have `set_global_script_repeat(30)`, you are definitely doing something wrong. Look for suitable hooks harder, think of another way for implementing it, ask fellow modders for help.

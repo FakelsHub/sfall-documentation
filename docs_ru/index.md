@@ -6,13 +6,13 @@ nav_order: 1
 ---
 
 
-## Sfall
+## sfall
 {: .no_toc}
 
 * TOC
 {: toc}
 
-Sfall is a set of engine modifications for the classic game Fallout 2 in form of a DLL, which modifies executable in memory without changing anything in EXE file itself.
+sfall is a set of engine modifications for the classic game Fallout 2 in form of a DLL, which modifies executable in memory without changing anything in EXE file itself.
 
 Engine modifications include:
 
@@ -24,9 +24,9 @@ Engine modifications include:
 
 ## Getting started
 
-This is documentation for Sfall specifically, not Fallout scripting in general. For vanilla function reference, refer to the [wiki](https://falloutmods.fandom.com/wiki/Fallout_1_and_Fallout_2_scripting_-_commands,_reference,_tutorials).
+This is documentation for sfall specifically, not Fallout scripting in general. For vanilla function reference, refer to the [wiki](https://falloutmods.fandom.com/wiki/Fallout_1_and_Fallout_2_scripting_-_commands,_reference,_tutorials).
 
-To get started with Sfall, first familiarize yourself with new concepts:
+To get started with sfall, first familiarize yourself with new concepts:
 * [Global scripts](global-scripts/)
 * [Global variables](global-variables/)
 * [Arrays](arrays/)
@@ -36,7 +36,8 @@ To get started with Sfall, first familiarize yourself with new concepts:
 
 Pay special attention to the [best practices]({{ site.baseurl }}/best-practices/) page.
 
-Next, proceed to discover new functions. They are categorized, use the menu to find the one you need. If you can't, also check [uncategorized functions]({{ site.baseurl }}/other/) list and [Sfall macros]({{ site.baseurl }}/sfall-funcx-macros/).
+Next, proceed to discover new functions. They are categorized, use the menu to find the one you need. If you can't, also check [uncategorized functions]({{ site.baseurl }}/other/) list and [sfall macros]({{ site.baseurl }}/sfall-funcx-macros/).
 
 ## Questions and problems
 * Report bugs and suggest features on [Github](https://github.com/phobos2077/sfall/issues).
+* Ask questions and discuss on the [forum](http://nma-fallout.com/threads/fo2-engine-tweaks-sfall.178390/).

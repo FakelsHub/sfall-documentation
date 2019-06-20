@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: sfall
+title: "sfall - Scripting"
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  sfall documentation
-baseurl: "/sfall" # the subpath of your site, e.g. /blog
+  "sfall functions documentation"
+baseurl: "/sfall-documentation" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:
 
@@ -26,13 +26,6 @@ markdown: kramdown
 plugins:
   - jekyll-remote-theme
 
-#remote_theme: tomjoht/documentation-theme-jekyll@gh-pages
-#remote_theme: alexander-heimbuch/millidocs
-#remote_theme: chromatical/jekyll-materialdocs
-#mdl_colors: indigo-blue
-#remote_theme: wiredcraft/carte
-#remote_theme: marella/jekyll-theme-documentation
-#remote_theme: fedeTibaldo/documentation-jekyll-theme
 remote_theme: pmarsceill/just-the-docs
 
 search_enabled: true
