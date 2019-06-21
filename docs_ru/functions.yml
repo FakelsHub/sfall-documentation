@@ -53,7 +53,7 @@
     opcode: 0x821b
     unsafe: true
 
-- name: Call Offset
+- name: Call offset
   parent: Direct memory access
   doc: Can be used to call arbitrary functions inside Fallout. Different versions are used to call functions with different numbers of arguments. _None of these functions will work unless_ `AllowUnsafeScripting` _is enabled in_ `ddraw.ini`.
   items:
@@ -575,22 +575,6 @@
     detail: int get_mouse_buttons()
     doc: Returns the number of the mouse button that is currently pressed (1 - left, 2 - right, 3 - left+right, 4 - middle, 0 otherwise).
     opcode: 0x821e
-
-- name: Lists
-  doc: The `list_xxx` functions can be used to loop over all items on a map. `list_begin` takes an argument telling sfall what you want to list. (Defined in `sfall.h`) It returns a list pointer, which you iterate through with `list_next`. Finally, when you've finished with the list use `list_end` on it. Not calling `list_end` will result in a memory leak. Alternatively, use `list_as_array` to get the whole list at once as a temp array variable, which can be looped over using `len_array` and which you don't need to remember to free afterwards.
-  items:
-  - name: list_begin
-    detail: int list_begin(int type)
-    opcode: 0x820d
-  - name: list_next
-    detail: int list_next(int listid)
-    opcode: 0x820e
-  - name: list_end
-    detail: void list_end(int listid)
-    opcode: 0x820f
-  - name: list_as_array
-    detail: array list_as_array(int type)
-    opcode: 0x8236
 
 - name: Explosions
   items:
@@ -1217,6 +1201,23 @@
     detail: int load_array(mixed key)
     doc: Load array from savegame data by the same key provided in "save_array".
     opcode: 0x8255
+
+- name: List functions
+  parent: Arrays # not in this files, normal page
+  doc: The `list_xxx` functions can be used to loop over all items on a map. `list_begin` takes an argument telling sfall what you want to list. (Defined in `sfall.h`) It returns a list pointer, which you iterate through with `list_next`. Finally, when you've finished with the list use `list_end` on it. Not calling `list_end` will result in a memory leak. Alternatively, use `list_as_array` to get the whole list at once as a temp array variable, which can be looped over using `len_array` and which you don't need to remember to free afterwards.
+  items:
+  - name: list_begin
+    detail: int list_begin(int type)
+    opcode: 0x820d
+  - name: list_next
+    detail: int list_next(int listid)
+    opcode: 0x820e
+  - name: list_end
+    detail: void list_end(int listid)
+    opcode: 0x820f
+  - name: list_as_array
+    detail: array list_as_array(int type)
+    opcode: 0x8236
 
 - name: Sfall funcX
   items:
