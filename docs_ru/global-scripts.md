@@ -2,9 +2,10 @@
 layout: page
 title: Global scripts
 nav_order: 2
+has_children: true
 permalink: /global-scripts/
 ---
-
+---
 # Global scripts
 
 As well as the new functions, sfall also adds global scripts. These run independent of any loaded maps, but do not have an attached object. (i.e. using `self_obj` without using `set_self` first will crash the script.) To use a global script, the script must have a name which begins with `gl` and contains a procedure called `start`, `map_enter_p_proc`, `map_exit_p_proc`, or `map_update_p_proc`. The start procedure will be executed once when the player loads a saved game or starts a new game. The `map_*_p_proc` procedures will be executed once when a map is being entered/left/updated. If you wish the script to be executed repeatedly, call `set_global_script_repeat` on the first run of the start procedure using the number of frames between each run as the argument. (0 disables the script, 1 runs it every frame, 2 runs it every other frame etc.)
