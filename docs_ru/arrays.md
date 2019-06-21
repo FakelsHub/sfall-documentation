@@ -5,7 +5,7 @@ nav_order: 2
 has_children: true
 permalink: /arrays/
 ---
-
+---
 # Arrays
 {: .no_toc}
 
@@ -19,8 +19,8 @@ See array function reference [here]({{ site.baseurl }}/array-functions/).
 
 ## Arrays concept
 
-Array elements are accessed by index or key. For example:
-
+Array elements are accessed by index or key.
+#### Example:
 ```c++
 // this code puts some string in array "list" at index 5:
 list[5] := "Value";
@@ -28,8 +28,7 @@ list[5] := "Value";
 
 There are 2 different types of arrays currently available:
 * Lists - a set of values with specific size (number of elements), where all elements have numeric indexes starting from zero (0) up to array length minus one.
-
-  For example:
+####   Example:
   ```c++
   // this creates list with 3 elements. Element "A" has index 0, element "B" has index 1, element "C" - 2
   list := ["A", "B", "C"];
@@ -103,8 +102,7 @@ where you create temp_array, it will not be available next time your global scri
 This type of arrays are always available (by their ID) until you start a new game or load a saved game (at which point they are deleted).
 
 * Saved. If you want your array to really stay for a while, use function `save_array` to make any array "saved". However, they are, like permanent arrays, "deleted" from memory when loading game. In order to use them properly, you must load them from the savegame using `load_array` whenever you want to use them.
-Example:
-
+#### Example:
 ```js
 variable savedArray;
 procedure start begin

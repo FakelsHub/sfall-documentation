@@ -15,8 +15,7 @@
 #     macro:  true/false                                    # OPTIONAL
 
 - name: Direct memory access # just parent page
-
-- name: read_xxx
+- name: Read
   parent: Direct memory access
   doc: These functions take a memory address as the parameter and can read arbitrary pieces of Fallout's address space.
   items:
@@ -33,7 +32,7 @@
     detail: int read_string(int address)
     opcode: 0x8159
 
-- name: write_xxx
+- name: Write
   parent: Direct memory access
   doc: These functions take a memory address as the parameter and can write to arbitrary pieces of Fallout's address _None of these functions will work unless_ `AllowUnsafeScripting` _is enabled in_ `ddraw.ini`.
   items:
@@ -54,7 +53,7 @@
     opcode: 0x821b
     unsafe: true
 
-- name: call_offset_vX
+- name: Call Offset
   parent: Direct memory access
   doc: Can be used to call arbitrary functions inside Fallout. Different versions are used to call functions with different numbers of arguments. _None of these functions will work unless_ `AllowUnsafeScripting` _is enabled in_ `ddraw.ini`.
   items:
@@ -1484,7 +1483,7 @@
       - `fileNumber`: the file ID number for the `message_str_game` function to get messages from the file. The available range is from 0x3000 to 0x3FFF.
 
 - name: NPC perks
-  parent: sfall funcX macros
+  parent: Sfall funcX macros
   doc: These functions are similar to `has_fake_*/set_fake_*/set_selectable_perk` functions, but apply to the specified party member NPC (including `dude_obj`)
   items:
   - name: set_fake_perk_npc

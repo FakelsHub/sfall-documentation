@@ -90,6 +90,8 @@ with open(functions_yaml) as yf:
         # macros
         if 'macro' in i and i['macro'] is True:
           text += '{: .d-inline-block }\nMACRO\n{: .label .label-green }\n'
+        if 'unsafe' in i and i['unsafe'] is True:
+          text += '{: .d-inline-block }\nUNSAFE\n{: .label .label-red }\n' 
         # usage
         text += '''```c++
 {}
