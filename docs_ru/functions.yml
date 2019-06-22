@@ -10,6 +10,7 @@
 #   - name: function_name                                   # REQUIRED
 #     detail: void function_name(ObjPtr obj, string text)   # REQUIRED. Will be displayed in IDE.
 #     doc: fuction documentation in markdown format         # OPTIONAL. Will be displayed in IDE.
+#     details: дополнительная информация для макроса        # OPTIONAL
 #     opcode: function opcode                               # OPTIONAL
 #     unsafe: true/false                                    # OPTIONAL. Whether it requires AllowUnsafeScripting.
 #     macro:  true/false                                    # OPTIONAL
@@ -786,9 +787,9 @@
 
   - name: floor2
     detail: int floor2(int/float value)
+    details: int sfall_func1("floor2", int/float value)
     doc: Works just like vanilla floor function, but returns correct integers for negative values (vanilla floor function works exactly the same as `ceil` for negative values, much like `trunc` in C/C++).
-    macro: |
-      int sfall_func1("floor2", int/float value)
+    macro: true
 
 - name: Keyboard and Mouse
   items:
@@ -1701,13 +1702,13 @@
 
   - name: create_win
     detail: void create_win(string winName, int x, int y, int width, int height, int flags)
+    details: |
+      void sfall_func5("create_win", string winName, int x, int y, int width, int height)
+      void sfall_func6("create_win", string winName, int x, int y, int width, int height, int flags)
     doc: |
       Works just like vanilla `CreateWin` function, but creates a window with `MoveOnTop` flag if the flags argument is not specified, and allows to set additional flags for the created window.
        - `MoveOnTop`: flag allows the created window to be placed on top of the game interface.
        - `flags`: argument is optional.
-    macro: |
-      void sfall_func5("create_win", string winName, int x, int y, int width, int height)
-      void sfall_func6("create_win", string winName, int x, int y, int width, int height, int flags)
 
   - name: item_make_explosive
     detail: void item_make_explosive(int pid, int activePid, int minDamage, int maxDamage)

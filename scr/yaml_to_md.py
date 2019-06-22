@@ -100,6 +100,11 @@ with open(functions_yaml) as yf:
         # doc, if present
         if 'doc' in i:
           text += i['doc'] + '\n'
+        if 'details' in i:
+          text += "\n\n**Macro from:**\n{: .fs-2 .lh-0 }\n" + '''```
+{}
+```
+'''.format(i['details'])
         text += '\n---\n'
 
     md_path = os.path.join(md_dir, slug + ".md")
