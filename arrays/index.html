@@ -1,0 +1,5038 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+    <title>Arrays - sfall - Scripting</title>
+
+    
+  
+
+  <link rel="shortcut icon" href="/sfall-documentation/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/sfall-documentation/assets/css/just-the-docs.css">
+
+  
+
+  
+    <script type="text/javascript" src="/sfall-documentation/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/sfall-documentation/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Arrays | sfall - Scripting</title>
+<meta property="og:title" content="Arrays" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="“sfall functions documentation”" />
+<meta property="og:description" content="“sfall functions documentation”" />
+<link rel="canonical" href="/sfall-documentation/arrays/" />
+<meta property="og:url" content="/sfall-documentation/arrays/" />
+<meta property="og:site_name" content="sfall - Scripting" />
+<script type="application/ld+json">
+{"name":null,"description":"“sfall functions documentation”","author":null,"@type":"WebPage","url":"/sfall-documentation/arrays/","publisher":null,"image":null,"headline":"Arrays","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+  <div class="page-wrap">
+    <div class="side-bar">
+      <a href="/sfall-documentation/" class="site-title fs-6 lh-tight">sfall - Scripting</a>
+      <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
+      <div class="navigation main-nav js-main-nav">
+        <nav role="navigation" aria-label="Main navigation">
+  <ul class="navigation-list">
+    
+    
+      
+        
+          <li class="navigation-list-item active">
+            
+            <a href="/sfall-documentation/404.html" class="navigation-list-link"></a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/" class="navigation-list-link">Home</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item active">
+            
+            <a href="/sfall-documentation/arrays/" class="navigation-list-link active">Arrays</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/array-functions/" class="navigation-list-link">Array functions</a>
+                      
+                        
+                        <ul class="navigation-list-child-list">
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/list-functions/" class="navigation-list-link">List functions</a>
+                      
+                        
+                        <ul class="navigation-list-child-list">
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/best-practices/" class="navigation-list-link">Best practices</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/data-types/" class="navigation-list-link">Data types</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/global-scripts/" class="navigation-list-link">Global scripts</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/global-script-functions/" class="navigation-list-link">Global script functions</a>
+                      
+                        
+                        <ul class="navigation-list-child-list">
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/hooks/" class="navigation-list-link">Hooks</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/hook-functions/" class="navigation-list-link">Hook functions</a>
+                      
+                        
+                        <ul class="navigation-list-child-list">
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/hook-types/" class="navigation-list-link">Hook types</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/art-and-animations/" class="navigation-list-link">Art and Animations</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/combat/" class="navigation-list-link">Combat</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/knockback/" class="navigation-list-link">Knockback</a>
+                      
+                        
+                        <ul class="navigation-list-child-list">
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/weapons-and-ammo/" class="navigation-list-link">Weapons and Ammo</a>
+                      
+                        
+                        <ul class="navigation-list-child-list">
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/critical-table/" class="navigation-list-link">Critical table</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/direct-memory-access/" class="navigation-list-link">Direct memory access</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/call-offset/" class="navigation-list-link">Call offset</a>
+                      
+                        
+                        <ul class="navigation-list-child-list">
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/read/" class="navigation-list-link">Read</a>
+                      
+                        
+                        <ul class="navigation-list-child-list">
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/write/" class="navigation-list-link">Write</a>
+                      
+                        
+                        <ul class="navigation-list-child-list">
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/explosions/" class="navigation-list-link">Explosions</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/global-variables/" class="navigation-list-link">Global variables</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/graphics/" class="navigation-list-link">Graphics</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/interface/" class="navigation-list-link">Interface</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/inventory/" class="navigation-list-link">Inventory</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/keyboard-and-mouse/" class="navigation-list-link">Keyboard and Mouse</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/maps-and-encounters/" class="navigation-list-link">Maps and Encounters</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/pathway/" class="navigation-list-link">Pathway</a>
+                      
+                        
+                        <ul class="navigation-list-child-list">
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/position-on-map/" class="navigation-list-link">Position on map</a>
+                      
+                        
+                        <ul class="navigation-list-child-list">
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/tiles/" class="navigation-list-link">Tiles</a>
+                      
+                        
+                        <ul class="navigation-list-child-list">
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/math/" class="navigation-list-link">Math</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/misc-finctions/" class="navigation-list-link">Misc finctions</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/modificators/" class="navigation-list-link">Modificators</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/objects-and-prototypes/" class="navigation-list-link">Objects and Prototypes</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/perks-and-traits/" class="navigation-list-link">Perks and Traits</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/scripting-config-files/" class="navigation-list-link">Scripting config files</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/sfall-funcx/" class="navigation-list-link">Sfall funcX</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/funcx-macros/" class="navigation-list-link">FuncX macros</a>
+                      
+                        
+                        <ul class="navigation-list-child-list">
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                              <li class="navigation-list-item ">
+                                <a href="/sfall-documentation/npc-perks/" class="navigation-list-link">NPC perks</a>
+                              </li>
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/skills/" class="navigation-list-link">Skills</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/sound-and-movie/" class="navigation-list-link">Sound and Movie</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/stats/" class="navigation-list-link">Stats</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="/sfall-documentation/alter-min-max/" class="navigation-list-link">Alter min/max</a>
+                      
+                        
+                        <ul class="navigation-list-child-list">
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/string-functions/" class="navigation-list-link">String functions</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/time-and-date/" class="navigation-list-link">Time and Date</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="/sfall-documentation/virtual-file-system/" class="navigation-list-link">Virtual file system</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+  </ul>
+</nav>
+
+      </div>
+      <footer role="contentinfo" class="site-footer">
+        <p class="text-small text-grey-dk-000 mb-0">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p>
+      </footer>
+    </div>
+    <div class="main-content-wrap js-main-content" tabindex="0">
+      <div class="page-header">
+        <div class="main-content">
+          
+          <div class="search js-search">
+            <div class="search-input-wrap">
+              <input type="text" class="js-search-input search-input" tabindex="0" placeholder="Search sfall - Scripting" aria-label="Search sfall - Scripting" autocomplete="off">
+              <svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
+            </div>
+            <div class="js-search-results search-results-wrap"></div>
+          </div>
+          
+          
+            <ul class="list-style-none text-small mt-md-1 mb-md-1 pb-4 pb-md-0 js-aux-nav aux-nav">
+              
+                <li class="d-inline-block my-0"><a href="//github.com/FakelsHub/sFall-Extended/">Sfall on GitHub</a></li>
+              
+            </ul>
+          
+        </div>
+      </div>
+      <div class="main-content">
+        
+          
+        
+        <div id="main-content" class="page-content" role="main">
+          
+          
+
+          
+          
+
+          
+          <h2>Subcategories</h2>
+          
+          <ul>
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <li>
+                <a href="/sfall-documentation/array-functions/">Array functions</a>
+              </li>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <li>
+                <a href="/sfall-documentation/list-functions/">List functions</a>
+              </li>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          </ul>
+          
+          
+          <hr />
+<h1 class="no_toc" id="arrays">Arrays</h1>
+
+<p>sfall introduces new method of storing variables - arrays.</p>
+
+<p>Array is basically a container which can store variable number of values (elements). Each element in array can be of any type. Arrays can be extremely useful for some more advanced scripting, in conjunction with loops.
+See array function reference <a href="/sfall-documentation/array-functions/">here</a>.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#arrays-concept" id="markdown-toc-arrays-concept">Arrays concept</a>    <ul>
+      <li><a href="#example" id="markdown-toc-example">Example:</a></li>
+      <li><a href="#example-1" id="markdown-toc-example-1">Example:</a></li>
+    </ul>
+  </li>
+  <li><a href="#arrays-syntax" id="markdown-toc-arrays-syntax">Arrays syntax</a></li>
+  <li><a href="#storing-arrays" id="markdown-toc-storing-arrays">Storing arrays</a>    <ul>
+      <li><a href="#example-2" id="markdown-toc-example-2">Example:</a></li>
+    </ul>
+  </li>
+  <li><a href="#practical-examples" id="markdown-toc-practical-examples">Practical examples</a>    <ul>
+      <li><a href="#use-arrays-to-implement-variable-argument-procedures" id="markdown-toc-use-arrays-to-implement-variable-argument-procedures">Use arrays to implement variable-argument procedures</a></li>
+      <li><a href="#create-arrays-of-objects-maps-for-advanced-scripting" id="markdown-toc-create-arrays-of-objects-maps-for-advanced-scripting">Create arrays of objects (maps) for advanced scripting</a></li>
+    </ul>
+  </li>
+  <li><a href="#array-operators-reference" id="markdown-toc-array-operators-reference">Array operators reference</a></li>
+  <li><a href="#backward-compatibility-notes" id="markdown-toc-backward-compatibility-notes">Backward compatibility notes</a></li>
+</ul>
+
+<h2 id="arrays-concept">Arrays concept</h2>
+
+<p>Array elements are accessed by index or key.</p>
+<h4 id="example">Example:</h4>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// this code puts some string in array "list" at index 5:
+</span><span class="n">list</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">:=</span> <span class="s">"Value"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>There are 2 different types of arrays currently available:</p>
+<ul>
+  <li>Lists - a set of values with specific size (number of elements), where all elements have numeric indexes starting from zero (0) up to array length minus one.
+    <h4 id="example-1">Example:</h4>
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// this creates list with 3 elements. Element "A" has index 0, element "B" has index 1, element "C" - 2
+</span><span class="n">list</span> <span class="o">:=</span> <span class="p">[</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">];</span>
+</code></pre></div>    </div>
+
+    <p>Limitations:</p>
+    <ul>
+      <li>all indexes are numeric, starting from 0;</li>
+      <li>to assign value to a specific index, you must first resize array to contain this index
+(for example, if list is of size 3 (indexes from 0 to 2), you can’t assign value to index 4 unless you change list size to 5 first).</li>
+    </ul>
+  </li>
+  <li>Maps (or associative arrays) - a set of key=&gt;value pairs, where all elements (values) are accessed by corresponding keys.
+Differences from list:
+    <ul>
+      <li>maps don’t have specific size (to assign values, you don’t need to resize array first);</li>
+      <li>keys, just like values, can be of any type (but avoid using -1 as array keys or you won’t be able to use some functions reliably).</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Both array types have their pros and cons and are suited for different tasks.</p>
+
+<h2 id="arrays-syntax">Arrays syntax</h2>
+
+<p>Basically arrays are implemented using number of new operators (scripting functions). But for ease of use, there are some new syntax elements:</p>
+
+<ul>
+  <li>Accessing elements. Use square brackets:
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">display_msg</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+<span class="nx">mymap</span><span class="p">[</span><span class="s2">"price"</span><span class="p">]</span> <span class="p">:</span><span class="o">=</span> <span class="mf">515.23</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Alternative accessing for maps. Use dot:
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">display_msg</span><span class="p">(</span><span class="nx">mymap</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+<span class="nx">mymap</span><span class="p">.</span><span class="nx">price</span> <span class="p">:</span><span class="o">=</span> <span class="mf">232.23</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Array expressions. Create and fill arrays with just one expression:
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// create list with 5 values
+</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">777</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="s">"Cool Value"</span><span class="p">]</span>
+
+<span class="c1">// create map:
+</span><span class="p">{</span><span class="mi">5</span><span class="o">:</span> <span class="s">"Five"</span><span class="p">,</span> <span class="s">"health"</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s">"speed"</span><span class="o">:</span> <span class="mf">0.252</span><span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>NOTES:</strong>
+Make sure to call <code class="highlighter-rouge">fix_array</code> if you want new array to be available in the next frame or <code class="highlighter-rouge">save_array</code> if you want to use it for a longer period (see next section for details).</p>
+  </li>
+  <li>Iterating in loop. Use “foreach” key word like this:
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">foreach</span> <span class="p">(</span><span class="nx">item</span> <span class="k">in</span> <span class="nx">myarray</span><span class="p">)</span> <span class="nx">begin</span>
+    <span class="c1">// this block is executed for each array element, where "item" contains current value on each step</span>
+<span class="nx">end</span>
+
+<span class="c1">// alternative syntax:</span>
+<span class="nx">foreach</span> <span class="p">(</span><span class="nx">key</span><span class="p">:</span> <span class="nx">item</span> <span class="k">in</span> <span class="nx">myarray</span><span class="p">)</span> <span class="nx">begin</span>
+    <span class="c1">// "key" will contain current key (or numeric index, for lists)</span>
+<span class="nx">end</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>See “Script editor\docs\sslc readme.txt” file for full information on new SSL syntax features.</p>
+
+<h2 id="storing-arrays">Storing arrays</h2>
+
+<p>Apart from lists/maps arrays are divided by how they are stored.
+There a 3 types of arrays:</p>
+
+<ul>
+  <li>
+    <p>Temporary. They are created using <code class="highlighter-rouge">temp_array</code> function or when using array expressions.
+Arrays of this type are auto-deleted at the end of the frame. So, for example, if you have a global script which runs at regular intervals,
+where you create temp_array, it will not be available next time your global script is executed.</p>
+  </li>
+  <li>
+    <p>Permanent. They are created using <code class="highlighter-rouge">create_array</code> function or <code class="highlighter-rouge">fix_array</code> (from pre-existing temporary array).
+This type of arrays are always available (by their ID) until you start a new game or load a saved game (at which point they are deleted).</p>
+  </li>
+  <li>
+    <p>Saved. If you want your array to really stay for a while, use function <code class="highlighter-rouge">save_array</code> to make any array “saved”. However, they are, like permanent arrays, “deleted” from memory when loading game. In order to use them properly, you must load them from the savegame using <code class="highlighter-rouge">load_array</code> whenever you want to use them.</p>
+    <h4 id="example-2">Example:</h4>
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">variable</span> <span class="nx">savedArray</span><span class="p">;</span>
+<span class="nx">procedure</span> <span class="nx">start</span> <span class="nx">begin</span>
+  <span class="k">if</span> <span class="nx">game_loaded</span> <span class="nx">then</span> <span class="nx">begin</span>
+      <span class="nx">savedArray</span> <span class="p">:</span><span class="o">=</span> <span class="nx">load_array</span><span class="p">(</span><span class="s2">"traps"</span><span class="p">);</span>
+  <span class="nx">end</span> <span class="k">else</span> <span class="nx">begin</span>
+      <span class="nx">foreach</span> <span class="nx">trap</span> <span class="k">in</span> <span class="nx">traps</span> <span class="nx">begin</span>
+          <span class="p">....</span>
+      <span class="nx">end</span>
+  <span class="nx">end</span>
+<span class="nx">end</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="practical-examples">Practical examples</h2>
+
+<h3 id="use-arrays-to-implement-variable-argument-procedures">Use arrays to implement variable-argument procedures</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// define it</span>
+<span class="nx">procedure</span> <span class="nx">give_item</span><span class="p">(</span><span class="nx">variable</span> <span class="nx">critter</span><span class="p">,</span> <span class="nx">variable</span> <span class="nx">pidList</span><span class="p">)</span> <span class="nx">begin</span>
+    <span class="nx">foreach</span> <span class="p">(</span><span class="nx">pid</span><span class="p">:</span> <span class="nx">qty</span> <span class="k">in</span> <span class="nx">pidList</span><span class="p">)</span> <span class="nx">begin</span>
+        <span class="nx">give_pid_qty</span><span class="p">(</span><span class="nx">critter</span><span class="p">,</span> <span class="nx">pid</span><span class="p">,</span> <span class="nx">qty</span><span class="p">);</span>
+    <span class="nx">end</span>
+<span class="nx">end</span>
+
+<span class="c1">// call it:</span>
+<span class="nx">call</span> <span class="nx">give_item</span><span class="p">(</span><span class="nx">dude_obj</span><span class="p">,</span> <span class="p">{</span><span class="na">PID_SHOTGUN</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">PID_SHOTGUN_SHELLS</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="na">PID_STIMPAK</span><span class="p">:</span> <span class="mi">3</span><span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="create-arrays-of-objects-maps-for-advanced-scripting">Create arrays of objects (maps) for advanced scripting</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">variable</span> <span class="nx">traps</span><span class="p">;</span>
+<span class="nx">procedure</span> <span class="nx">init_traps</span> <span class="nx">begin</span>
+    <span class="c1">// just a quick example, there is a better way of doing it...</span>
+    <span class="nx">traps</span> <span class="p">:</span><span class="o">=</span> <span class="nx">load_array</span><span class="p">(</span><span class="s2">"traps"</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">traps</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">then</span> <span class="nx">begin</span>
+        <span class="nx">traps</span> <span class="p">:</span><span class="o">=</span> <span class="p">[];</span>
+        <span class="nx">save_array</span><span class="p">(</span><span class="s2">"traps"</span><span class="p">,</span> <span class="nx">traps</span><span class="p">);</span>
+    <span class="nx">end</span>
+    <span class="nx">foreach</span> <span class="nx">k</span><span class="p">:</span> <span class="nx">v</span> <span class="k">in</span> <span class="nx">traps</span> <span class="nx">begin</span>
+        <span class="nx">traps</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="p">:</span><span class="o">=</span> <span class="nx">load_array</span><span class="p">(</span><span class="s2">"trap_"</span><span class="o">+</span><span class="nx">k</span><span class="p">);</span> <span class="c1">// each object is stored separately</span>
+    <span class="nx">end</span>
+<span class="nx">end</span>
+
+<span class="nx">procedure</span> <span class="nx">add_trap</span><span class="p">(</span><span class="nx">variable</span> <span class="nx">trapArray</span><span class="p">)</span> <span class="nx">begin</span>
+    <span class="nx">variable</span> <span class="nx">index</span><span class="p">;</span>
+    <span class="nl">index</span> <span class="p">:</span><span class="o">=</span> <span class="nx">len_array</span><span class="p">(</span><span class="nx">traps</span><span class="p">);</span>
+    <span class="nx">save_array</span><span class="p">(</span><span class="s2">"trap_"</span><span class="o">+</span><span class="nx">k</span><span class="p">,</span> <span class="nx">trapArray</span><span class="p">);</span>
+    <span class="nx">array_push</span><span class="p">(</span><span class="nx">traps</span><span class="p">,</span> <span class="nx">trapArray</span><span class="p">);</span>
+<span class="nx">end</span>
+
+<span class="c1">// use them:</span>
+<span class="nx">foreach</span> <span class="nx">trap</span> <span class="k">in</span> <span class="nx">traps</span> <span class="nx">begin</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">self_elevation</span> <span class="o">==</span> <span class="nx">trap</span><span class="p">[</span><span class="s2">"elev"</span><span class="p">]</span> <span class="nx">and</span> <span class="nx">tile_distance</span><span class="p">(</span><span class="nx">self_tile</span><span class="p">,</span> <span class="nx">trap</span><span class="p">[</span><span class="s2">"tile"</span><span class="p">])</span> <span class="o">&lt;</span> <span class="nx">trap</span><span class="p">[</span><span class="s2">"radius"</span><span class="p">])</span> <span class="nx">then</span>
+        <span class="c1">// kaboom!!!</span>
+    <span class="nx">end</span>
+<span class="nx">end</span>
+</code></pre></div></div>
+
+<h2 id="array-operators-reference">Array operators reference</h2>
+
+<p>*mixed means any type</p>
+
+<ul>
+  <li><code class="highlighter-rouge">int create_array(int size, int flags)</code>:
+    <ul>
+      <li>creates permanent array (but not “saved”)</li>
+      <li>if size is &gt;= 0, creates list with given size</li>
+      <li>if size == -1, creates map (associative array)</li>
+      <li>if size == -1 and flags == 2, creates a “lookup” map in which the values of existing keys are read-only and can’t be updated.
+This type of array allows you to store a zero (0) key value</li>
+      <li>NOTE: in earlier versions (up to 4.1.3/3.8.13) the second argument is not used, just use 0</li>
+      <li>returns arrayID (valid until array is deleted)</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">int temp_array(int size, int flags)</code>:
+    <ul>
+      <li>works exactly like <code class="highlighter-rouge">create_array</code>, only created array becomes “temporary”</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">void fix_array(int arrayID)</code>:
+    <ul>
+      <li>changes “temporary” array into “permanent” (“permanent” arrays are not automatically saved into savegames)</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">void set_array(int arrayID, mixed key, mixed value)</code>:
+    <ul>
+      <li>sets array value</li>
+      <li>if used on list, “key” must be numeric and within valid index range (0..size-1)</li>
+      <li>if used on map, key can be of any type</li>
+      <li>to “unset” a value from map, just set it to zero (0)</li>
+      <li>NOTE: to add a value of 0 for the key, use the float value of 0.0</li>
+      <li>this works exactly like statement:
+  <code class="highlighter-rouge">arrayID[key] := value;</code></li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">mixed get_array(int arrayID, mixed key)</code>:
+    <ul>
+      <li>returns array value by key or index</li>
+      <li>if key doesn’t exist or index is not in valid range, returns 0</li>
+      <li>works exactly like expression: <code class="highlighter-rouge">(arrayID[key])</code></li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">void resize_array(int arrayID, int size)</code>:
+    <ul>
+      <li>changes array size</li>
+      <li>applicable to maps too, but only to reduce elements</li>
+      <li>there are number of special negative values of “size” which perform various operations on the array, use macros <code class="highlighter-rouge">sort_array</code>, <code class="highlighter-rouge">sort_array_reverse</code>, <code class="highlighter-rouge">reverse_array</code>, <code class="highlighter-rouge">shuffle_array</code> from <code class="highlighter-rouge">sfall.h</code> header</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">void free_array(int arrayID)</code>:
+    <ul>
+      <li>deletes any array</li>
+      <li>if array was “saved”, it will be removed from a savegame</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">mixed scan_array(int arrayID, mixed value)</code>:
+    <ul>
+      <li>searches for a first occurence of given value inside given array</li>
+      <li>if value is found, returns it’s index (for lists) or key (for maps)</li>
+      <li>if value is not found, returns -1 (be careful, as -1 can be a valid key for a map)</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">int len_array(int arrayID)</code>:
+    <ul>
+      <li>returns number of elements or key=&gt;value pairs in a given array</li>
+      <li>if array is not found, returns -1  (can be used to check if given array exist)</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">mixed array_key(int arrayID, int index)</code>:
+    <ul>
+      <li>don’t use it directly; it is generated by the compiler in foreach loops</li>
+      <li>for lists, returns index back (no change)</li>
+      <li>for maps, returns a key at the specified numeric index (don’t rely on the order in which keys are stored though)</li>
+      <li>can be checked if given array is associative or not, by using index (-1): 0 - array is list, 1 - array is map</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">int arrayexpr(mixed key, mixed value)</code>:
+    <ul>
+      <li>don’t use it directly; it is used by compiler to create array expressions</li>
+      <li>assigns value to a given key in an array, created by last <code class="highlighter-rouge">create_array</code> or <code class="highlighter-rouge">temp_array</code> call</li>
+      <li>always returns 0</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">void save_array(mixed key, int arrayID)</code>:
+    <ul>
+      <li>arrayID is associated with given “key”</li>
+      <li>array becomes permanent (if it was temporary) and “saved”</li>
+      <li>key can be of any type (int, float or string)</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">int load_array(mixed key)</code>:
+    <ul>
+      <li>load array from savegame data by the same key provided in <code class="highlighter-rouge">save_array</code></li>
+      <li>arrayID is returned or zero (0) if none found</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="backward-compatibility-notes">Backward compatibility notes</h2>
+
+<p>For those who used arrays in their mods before sfall 3.4:</p>
+<ul>
+  <li>There is an INI parameter <code class="highlighter-rouge">arraysBehavior</code> in “Misc” section of ddraw.ini. If set to 0, all scripts which used sfall arrays before should work. This basically changes that <code class="highlighter-rouge">create_array</code> will create permanent arrays which are “saved” by default and their ID is also permanent. It is 1 by default.</li>
+  <li>If <code class="highlighter-rouge">arraysBehaviour=0</code>:
+Arrays are created and manipulated with the <code class="highlighter-rouge">xxx_array</code> functions. An array must first be created with <code class="highlighter-rouge">create_array</code> or <code class="highlighter-rouge">temp_array</code>, specifying how many data elements the array can hold. You can store any of ints, floats and strings in an array, and can mix all 3 in a single array. The id returned by <code class="highlighter-rouge">create/temp_array</code> can then be used with the other array functions. Arrays are shared between all scripts. (i.e. you can call <code class="highlighter-rouge">create_array</code> from one script, and then use the returned id from another script.) They are also saved across savegames. You must remember to free any arrays you create with <code class="highlighter-rouge">create_array</code> when you are done with them, or you will leak memory. arrays created with <code class="highlighter-rouge">temp_array</code> will be automatically freed at the end of the frame. These functions are safe, in that supplying a bad id or trying to access out of range elements will not crash the script. <code class="highlighter-rouge">create_array</code> is the only function that returns a permanent array, all other functions which return arrays (<code class="highlighter-rouge">string_split</code>, <code class="highlighter-rouge">list_as_array</code> etc,) all return temp arrays. You can use <code class="highlighter-rouge">fix_array</code> to make a temp array permanent.</li>
+  <li>How savegame compatibility is handled?
+Saved arrays are stored in sfallgv.sav file (in savegame) in new (more flexible) format, just after the old arrays. So basically, when you load older savegame, sfall will load arrays from old format and save them to new format on next game save. If you load savegame made with sfall 3.4 using sfall 3.3 (for example), game shouldn’t crash, but all arrays will be lost.</li>
+  <li>Previously you had to specify size in bytes for array elements. This parameter is now ignored and you can store strings of arbitrary length in arrays.</li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
