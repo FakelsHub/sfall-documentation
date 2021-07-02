@@ -1,9 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import sys, yaml, os
-reload(sys)
-sys.setdefaultencoding('utf8') # ugly buy works
+import sys, os
+import ruamel.yaml
+yaml = ruamel.yaml.YAML(typ="rt")
+yaml.width = 4096
+yaml.indent(mapping=2, sequence=4, offset=2)
+#import sys, yaml, os
+#reload(sys)
+#sys.setdefaultencoding('utf8') # ugly buy works
 
 functions_yaml = sys.argv[1]
 hooks_yaml = sys.argv[2]

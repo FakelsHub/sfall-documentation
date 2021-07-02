@@ -6,240 +6,176 @@ has_children: true
 permalink: /arrays/
 ---
 ---
-# Arrays
+# МАССИВЫ
 {: .no_toc}
 
-sfall introduces new method of storing variables - arrays.
+Sfall вводит новый метод хранения переменных - массивы.
 
-Array is basically a container which can store variable number of values (elements). Each element in array can be of any type. Arrays can be extremely useful for some more advanced scripting, in conjunction with loops.
+Массив - это в основном контейнер, в котором может храниться переменное количество значений (элементов). Каждый элемент в массиве может быть любого типа.
+Массивы могут быть чрезвычайно полезны для некоторых более сложных сценариев в сочетании с циклами.
 See array function reference [here]({{ site.baseurl }}/array-functions/).
 
-* TOC
-{:toc}
+***
+### КОНЦЕПЦИЯ МАССИВОВ
 
-## Arrays concept
+Массивы создаются и управляются с помощью функций массива. Для начала массив должен быть создан с помощью функций `create_array` или `temp_array`, указав, сколько элементов данных может содержать массив. Вы можете хранить любые типы данных `int`, `float` или `string` в массиве, также можно смешивать все 3 типа в одном массиве.  
+Идентификатор массива, возвращаемый функциями `create_array` или `temp_array`, может использоваться в других функциях для доступа к созданному массиву. Массивы являются общими для всех сценариев (т.е. вы можете вызвать "create_array" в одном сценарии, а затем использовать возвращенный идентификатор в совершенно другом сценарии для доступа к массиву).
+Массивы также могут быть сохранены в файлах сохранения игры.
 
-Array elements are accessed by index or key.
-#### Example:
-```c++
-// this code puts some string in array "list" at index 5:
-list[5] := "Value";
+Массивы, созданные с помощью `temp_array`, будут автоматически удалены в конце кадра выполнения сценария.
+`create_array` - единственная функция, которая возвращает постоянный массив, все остальные функции, возвращающие массивы (`string_split`, `list_as_array` и т.д.), создают временные массивы. Вы можете использовать функцию `fix_array`, чтобы сделать временный массив постоянным.  
+Функции массивов полностью безопасны в том смысле, что использование неверного идентификатора или попытки доступа к элементам вне размера массива не приведут к сбою в сценарии.  
+
+Доступ к элементам массива осуществляется по индексу или ключу. 
+
+_Пример:_
+```js
+    // this code puts some string in array "list" at index 5:
+    list[5] := "Value";
 ```
 
-There are 2 different types of arrays currently available:
-* Lists - a set of values with specific size (number of elements), where all elements have numeric indexes starting from zero (0) up to array length minus one.
-####   Example:
-  ```c++
-  // this creates list with 3 elements. Element "A" has index 0, element "B" has index 1, element "C" - 2
-  list := ["A", "B", "C"];
-  ```
+В настоящее время доступно 2 различных типа массива:
 
-  Limitations:
-  - all indexes are numeric, starting from 0;
-  - to assign value to a specific index, you must first resize array to contain this index
-  (for example, if list is of size 3 (indexes from 0 to 2), you can't assign value to index 4 unless you change list size to 5 first).
+1. **Lists** - предоставляет коллекцию значений, определенного размера (количество элементов), где элементы имеют числовые индексы, первый индекс элемента всегда начинается с нуля (0) до конца всей длины массива минус единица.
 
+    _Пример:_
+    ```js
+    // this creates list with 3 elements. Element "A" has index 0, element "B" has index 1, element "C" - 2
+    list := ["A", "B", "C"];
+    ```
+    Ограничения:
+      - все индексы являются числовыми, и начинаются с 0
+      - чтобы присвоить значение элементу списка по определенному индексу, необходимо для сначала изменить размер массива, чтобы список содержал этот индекс  
+        например, если список имеет размер 3 (индексы от 0 до 2), вы не можете присвоить значение по индексу 4, если сначала не измените размер списка на 5
 
-* Maps (or associative arrays) - a set of key=>value pairs, where all elements (values) are accessed by corresponding keys.
-  Differences from list:
-  - maps don't have specific size (to assign values, you don't need to resize array first);
-  - keys, just like values, can be of any type (but avoid using -1 as array keys or you won't be able to use some functions reliably).
+2. **Maps** - ассоциативные массивы содержат наборы пар **key=>value**, где все элементы (значения) доступны с помощью соответствующих ключей.
 
-Both array types have their pros and cons and are suited for different tasks.
+    Отличия Maps (карт) от List (списка):
+    - ассоциативные массивы не имеют определенного размера (для присвоения значений вам не нужно изменять размер массива)
+    - ключи, как и значения, могут быть любого типа (но избегайте использования -1 в качестве ключей массива, иначе вы не сможете надежно использовать некоторые функции)
 
+Оба типа массива имеют свои плюсы и минусы и подходят для решения различных задач.
 
-## Arrays syntax
+___
+### СИНТАКСИС МАССИВОВ
 
-Basically arrays are implemented using number of new operators (scripting functions). But for ease of use, there are some new syntax elements:
+В основном массивы реализуются с использованием ряда новых операторов (функций сценариев). Но для удобства использования есть некоторые новые элементы синтаксиса:
 
-* Accessing elements. Use square brackets:
-  ```js
-  display_msg(arr[5]);
-  mymap["price"] := 515.23;
-  ```
-* Alternative accessing for maps. Use dot:
-  ```js
-  display_msg(mymap.name);
-  mymap.price := 232.23;
-  ```
-* Array expressions. Create and fill arrays with just one expression:
-  ```c++
-  // create list with 5 values
-  [5, 777, 0, 3.14, "Cool Value"]
-
-  // create map:
-  {5: "Five", "health": 50, "speed": 0.252}
-  ```
-
-  __NOTES:__
-  Make sure to call `fix_array` if you want new array to be available in the next frame or `save_array` if you want to use it for a longer period (see next section for details).
-
-
-* Iterating in loop. Use "foreach" key word like this:
-  ```js
-  foreach (item in myarray) begin
-      // this block is executed for each array element, where "item" contains current value on each step
-  end
-
-  // alternative syntax:
-  foreach (key: item in myarray) begin
-      // "key" will contain current key (or numeric index, for lists)
-  end
-  ```
-
-See "Script editor\docs\sslc readme.txt" file for full information on new SSL syntax features.
-
-## Storing arrays
-
-Apart from lists/maps arrays are divided by how they are stored.
-There a 3 types of arrays:
-
-* Temporary. They are created using `temp_array` function or when using array expressions.
-Arrays of this type are auto-deleted at the end of the frame. So, for example, if you have a global script which runs at regular intervals,
-where you create temp_array, it will not be available next time your global script is executed.
-
-* Permanent. They are created using `create_array` function or `fix_array` (from pre-existing temporary array).
-This type of arrays are always available (by their ID) until you start a new game or load a saved game (at which point they are deleted).
-
-* Saved. If you want your array to really stay for a while, use function `save_array` to make any array "saved". However, they are, like permanent arrays, "deleted" from memory when loading game. In order to use them properly, you must load them from the savegame using `load_array` whenever you want to use them.
-#### Example:
+1. Доступ к элементам. Используйте квадратные скобки:
 ```js
-variable savedArray;
-procedure start begin
-    if game_loaded then begin
-        savedArray := load_array("traps");
-    end else begin
-        foreach trap in traps begin
-            ....
+    display_msg(arr[5]);
+    mymap["price"] := 515.23;
+```
+
+2. Альтернативный доступ к картам. Используйте точку:
+```js
+    display_msg(mymap.name);
+    mymap.price := 232.23;
+```
+
+3. Выражения массива. Создавайте и заполняйте массивы просто используя одно выражение:
+```js
+    // create list with 5 values
+    [5, 777, 0, 3.14, "Cool Value"]
+
+    // create map:
+    {5: "Five", "health": 50, "speed": 0.252}
+```
+__NOTES:__
+Обязательно вызовите `fix_array`, если вы хотите, чтобы новый массив был доступен в следующем фрейме выполнения сценария, или `save_array`, если вы хотите использовать его в течение более длительного периода (подробнее см. следующий раздел).
+
+4. Перебор элементов массива в цикле. Используйте ключевое слово `foreach` следующим образом:
+```js
+    foreach (item in myarray) begin
+        // этот блок выполняется для каждого элемента массива, где "item" содержит текущее значение на каждом шаге итерации
+    end
+
+    // альтернативный синтаксис:
+    foreach (key: item in myarray) begin
+        // "key" будет содержать текущий ключ (или числовой индекс, для списков)
+    end
+```
+
+См.: **sslc_readme.txt** файл для получения полной информации о новых функциях синтаксиса SSL.
+
+___
+### ХРАНЕНИЕ МАССИВОВ
+
+Часть массивов списков и карт разделена по способу их хранения.
+
+Существует 3 типа массивов:
+* **Temporary**: Они создаются с помощью функции `temp_array` или при использовании выражений массива. Массивы этого типа автоматически удаляются в конце кадра выполнения сценария. Так, например, если у вас есть глобальный сценарий, который выполняется через регулярные промежутки времени, где вы создаете `temp_array`, то массив не будет доступен при следующем выполнении вашего глобального сценария.
+
+* **Permanent**: Они создаются с помощью функций `create_array` или `fix_array` (из уже существующего временного массива). Массивы этого типа всегда доступны (по их идентификатору) до тех пор, пока вы не начнете новую игру или не загрузите сохраненную игру (после чего они будут удалены).
+
+* **Saved**: Если вы хотите, чтобы ваш массив действительно оставался на некоторое время, используйте функцию `save_array`, чтобы сделать любой массив "сохраняемым". Однако они, как и постоянные массивы, "удаляются" из памяти при загрузке игры. Чтобы правильно их использовать, вы должны загружать их из сохраненной игры с помощью "load_array" всякий раз, когда вы хотите их использовать.<br>
+    _Пример:_
+    ```js
+    variable savedArray;
+    procedure start begin
+        if game_loaded then begin
+            savedArray := load_array("traps");
+        end else begin
+            foreach trap in traps begin
+                ....
+            end
         end
     end
-end
-```
+    ```
+___
+### ПРАКТИЧЕСКИЕ ПРИМЕРЫ
 
-## Practical examples
-
-### Use arrays to implement variable-argument procedures
-
+**Используйте массивы для реализации процедур с переменными аргументами:**
 ```js
-// define it
-procedure give_item(variable critter, variable pidList) begin
-    foreach (pid: qty in pidList) begin
-        give_pid_qty(critter, pid, qty);
+    // define it
+    procedure give_item(variable critter, variable pidList) begin
+        foreach (pid: qty in pidList) begin
+            give_pid_qty(critter, pid, qty);
+        end
     end
-end
 
-// call it:
-call give_item(dude_obj, {PID_SHOTGUN: 1, PID_SHOTGUN_SHELLS: 4, PID_STIMPAK: 3});
+    // call it:
+    call give_item(dude_obj, {PID_SHOTGUN: 1, PID_SHOTGUN_SHELLS: 4, PID_STIMPAK: 3});
 ```
 
-### Create arrays of objects (maps) for advanced scripting
-
+**Создание массивов объектов (карт) для продвинутого скриптинга:**
 ```js
-variable traps;
-procedure init_traps begin
-    // just a quick example, there is a better way of doing it...
-    traps := load_array("traps");
-    if (traps == 0) then begin
-        traps := [];
-        save_array("traps", traps);
+    variable traps;
+    procedure init_traps begin
+        // just a quick example, there is a better way of doing it...
+        traps := load_array("traps");
+        if (traps == 0) then begin
+            traps := [];
+            save_array("traps", traps);
+        end
+        foreach k: v in traps begin
+            traps[k] := load_array("trap_"+k); // каждый объект хранится отдельно
+        end
     end
-    foreach k: v in traps begin
-        traps[k] := load_array("trap_"+k); // each object is stored separately
-    end
-end
 
-procedure add_trap(variable trapArray) begin
-    variable index;
-    index := len_array(traps);
-    save_array("trap_"+k, trapArray);
-    array_push(traps, trapArray);
-end
-
-// use them:
-foreach trap in traps begin
-    if (self_elevation == trap["elev"] and tile_distance(self_tile, trap["tile"]) < trap["radius"]) then
-        // kaboom!!!
+    procedure add_trap(variable trapArray) begin
+        variable index;
+        index := len_array(traps);
+        save_array("trap_"+k, trapArray);
+        array_push(traps, trapArray);
     end
-end
+
+    // use them:
+    foreach trap in traps begin
+        if (self_elevation == trap["elev"] and tile_distance(self_tile, trap["tile"]) < trap["radius"]) then
+            // kaboom!!!
+        end
+    end
 ```
 
-## Array operators reference
+___
+## ПРИМЕЧАНИЯ ПО ОБРАТНОЙ СОВМЕСТИМОСТИ
 
-*mixed means any type
+Для тех, кто использовал массивы в своих модах до sfall 3.4:
 
-* `int create_array(int size, int flags)`:
-  - creates permanent array (but not "saved")
-  - if size is >= 0, creates list with given size
-  - if size == -1, creates map (associative array)
-  - if size == -1 and flags == 2, creates a "lookup" map in which the values of existing keys are read-only and can't be updated.
-  This type of array allows you to store a zero (0) key value
-  - NOTE: in earlier versions (up to 4.1.3/3.8.13) the second argument is not used, just use 0
-  - returns arrayID (valid until array is deleted)
+1. Существует INI параметр **ArraysBehavior** в **Misc** разделе файла "ddraw.ini". Если его значение установлено в 0, то все сценарии, которые ранее использовали массивы sfall, должны работать. Это в основном меняет то, что `create_array` создает постоянные массивы, которые "сохраняются" по умолчанию, и их идентификатор также является постоянным. По умолчанию этот параметр равен 1.
 
-* `int temp_array(int size, int flags)`:
-  - works exactly like `create_array`, only created array becomes "temporary"
+2. Как обрабатывается совместимость с сохраненными играми?.<br>
+Сохраненные массивы хранятся в файле **sfallgv.sav** (в сохраненной игре) в новом (более гибком) формате сразу после старых массивов. Таким образом, в принципе, когда вы загружаете старую сохраненную игру, sfall загрузит массивы из старого формата и сохранит их в новом формате при следующем сохранении игры. Если вы загрузите сохраненную игру, созданную с помощью sfall 3.4, используя sfall 3.3 (например), игра не должна завершиться сбоем, но все массивы будут потеряны.
 
-* `void fix_array(int arrayID)`:
-  - changes "temporary" array into "permanent" ("permanent" arrays are not automatically saved into savegames)
-
-* `void set_array(int arrayID, mixed key, mixed value)`:
-  - sets array value
-  - if used on list, "key" must be numeric and within valid index range (0..size-1)
-  - if used on map, key can be of any type
-  - to "unset" a value from map, just set it to zero (0)
-  - NOTE: to add a value of 0 for the key, use the float value of 0.0
-  - this works exactly like statement:
-      `arrayID[key] := value;`
-
-* `mixed get_array(int arrayID, mixed key)`:
-  - returns array value by key or index
-  - if key doesn't exist or index is not in valid range, returns 0
-  - works exactly like expression: `(arrayID[key])`
-
-* `void resize_array(int arrayID, int size)`:
-  - changes array size
-  - applicable to maps too, but only to reduce elements
-  - there are number of special negative values of "size" which perform various operations on the array, use macros `sort_array`, `sort_array_reverse`, `reverse_array`, `shuffle_array` from `sfall.h` header
-
-* `void free_array(int arrayID)`:
-  - deletes any array
-  - if array was "saved", it will be removed from a savegame
-
-* `mixed scan_array(int arrayID, mixed value)`:
-  - searches for a first occurence of given value inside given array
-  - if value is found, returns it's index (for lists) or key (for maps)
-  - if value is not found, returns -1 (be careful, as -1 can be a valid key for a map)
-
-* `int len_array(int arrayID)`:
-  - returns number of elements or key=>value pairs in a given array
-  - if array is not found, returns -1  (can be used to check if given array exist)
-
-* `mixed array_key(int arrayID, int index)`:
-  - don't use it directly; it is generated by the compiler in foreach loops
-  - for lists, returns index back (no change)
-  - for maps, returns a key at the specified numeric index (don't rely on the order in which keys are stored though)
-  - can be checked if given array is associative or not, by using index (-1): 0 - array is list, 1 - array is map
-
-* `int arrayexpr(mixed key, mixed value)`:
-  - don't use it directly; it is used by compiler to create array expressions
-  - assigns value to a given key in an array, created by last `create_array` or `temp_array` call
-  - always returns 0
-
-* `void save_array(mixed key, int arrayID)`:
-  - arrayID is associated with given "key"
-  - array becomes permanent (if it was temporary) and "saved"
-  - key can be of any type (int, float or string)
-
-* `int load_array(mixed key)`:
-  - load array from savegame data by the same key provided in `save_array`
-  - arrayID is returned or zero (0) if none found
-
-## Backward compatibility notes
-
-For those who used arrays in their mods before sfall 3.4:
-* There is an INI parameter `arraysBehavior` in "Misc" section of ddraw.ini. If set to 0, all scripts which used sfall arrays before should work. This basically changes that `create_array` will create permanent arrays which are "saved" by default and their ID is also permanent. It is 1 by default.
-* If `arraysBehaviour=0`:
-  Arrays are created and manipulated with the `xxx_array` functions. An array must first be created with `create_array` or `temp_array`, specifying how many data elements the array can hold. You can store any of ints, floats and strings in an array, and can mix all 3 in a single array. The id returned by `create/temp_array` can then be used with the other array functions. Arrays are shared between all scripts. (i.e. you can call `create_array` from one script, and then use the returned id from another script.) They are also saved across savegames. You must remember to free any arrays you create with `create_array` when you are done with them, or you will leak memory. arrays created with `temp_array` will be automatically freed at the end of the frame. These functions are safe, in that supplying a bad id or trying to access out of range elements will not crash the script. `create_array` is the only function that returns a permanent array, all other functions which return arrays (`string_split`, `list_as_array` etc,) all return temp arrays. You can use `fix_array` to make a temp array permanent.
-* How savegame compatibility is handled?
-  Saved arrays are stored in sfallgv.sav file (in savegame) in new (more flexible) format, just after the old arrays. So basically, when you load older savegame, sfall will load arrays from old format and save them to new format on next game save. If you load savegame made with sfall 3.4 using sfall 3.3 (for example), game shouldn't crash, but all arrays will be lost.
-* Previously you had to specify size in bytes for array elements. This parameter is now ignored and you can store strings of arbitrary length in arrays.
+3. Ранее вам приходилось указывать размер в байтах для элементов массива. Этот параметр теперь игнорируется, и вы можете хранить строки произвольной длины в массивах.
