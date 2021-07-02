@@ -405,7 +405,8 @@
 
     ```
     int     arg1 - the vanilla fid calculated by the engine according to critter base FID and armor/weapon being used
-
+    int     arg2 - the modified FID, calculated by the internal sfall code (like Hero Appearance Mod)
+    
     int     ret1 - overrides the calculated FID with provided value
     ```
 
